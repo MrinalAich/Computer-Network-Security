@@ -1,0 +1,81 @@
+Firewall Assignment -
+
+Task 1 – 
+
+Creating a simple Firewall using Socket Programming 
+----------------------------------------------------
+
+Implement a simple firewall with two network interface cards connecting to the external network (Internet) and the internal network 
+that you secure. In the socket programing, we used read() for capturing packet.
+
+What do you do to let a packet go through the firewall from the outside to inside?
+In this stage, you may hardcode a simple rule set.
+
+The network topology that you use may be 3 VMs that are interconnected like {Host1 – Firewall – Host2}.
+Also, the mode of firewall operation maybe a router (visible) or a bridge (invisible from hosts).
+
+Task 2 – 
+
+Extending the rule set and its operation on Firewall 
+-----------------------------------------------------
+
+Extend the supported rule set at least upto layer 4 including 
+MAC, IPv4 IPv6, ICMP for IPv4/v6, TCP/UDP on top of the firewall developed for Task 1. 
+
+Instead of hardcoding the rule set, use a better way for updating the rule set without terminating the process of Firewall.
+You may think of Interactive CLI, REST API or something.
+
+As the operation of rule set, “Add”, “Delete”, “Update” and “Show Statistics” for a rule must be implemented.
+
+Your firewall must support the aggregation of a rule set, such as prefix or the range of port numbers. 
+
+
+Task 3 – 
+
+Performance examination and improvement 
+-----------------------------------------
+
+
+How do you tell the performance of your implementation?
+
+How much packet per second can your implementation handle (PPS)?
+
+Do you see any change of performance if drop or pass the packet?
+
+What happens if you have 10, 50 or 100 rules and the packets are equally matching the filtering rules?
+
+What happens if you increase the number of matching fields in a filtering rule, say MAC address only or Prefix/Port/Proto combination?    
+
+Generate the controlled or random traffic, and benchmark the system. 
+
+Show the benchmarking result as the proper graph with legend, description of each axis and unit.
+
+[You must clarify which traffic generator you use under what kind of configuration for collecting data.]
+
+
+Task 4-a -
+
+ Improving the firewall performance 
+ -----------------------------------
+Given the benchmarking result, how do you improve the firewall performance? 
+
+Explain how, implement it, and benchmark it again so that you can show the evidence of betterment. 
+
+Under what kind of condition does your solution work nice? 
+Is it an almighty solution or specific to some particular situations? 
+
+
+
+
+Task 4-b - 
+
+Detecting attacks in the network using Firewall 
+-------------------------------------------------
+
+Extend your firewall to detect attacks, such as DoS/DDoS, Port Scan, Cache Poisoning of unsecure protocol like ARP.
+Pickup at least one attack and explain what the attack is and how your firewall detects it. 
+
+Then, implement the detection mechanism on your firewall.
+The detection mechanism must be demonstrated based on the emulated attacks in your testbed.
+
+You must clarify which traffic generator or attacking tool you use under what kind of configuration for creating the emulated attacks.
